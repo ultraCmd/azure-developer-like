@@ -71,6 +71,7 @@ public class FormController {
 			model.addAttribute("feedbacks", feedbacks);
 		} catch (Exception ex) {
 			model.addAttribute("message", "Failed to save feedback");
+			throw ex;
 		}
 
 		return "form";
